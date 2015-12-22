@@ -65,7 +65,7 @@ typedef NS_OPTIONS(NSInteger, METMethodCallOptions) {
 @property (nullable, strong, nonatomic, readonly) METMethodInvocationContext *currentMethodInvocationContext;
 - (void)sendMethodMessageForMethodInvocation:(METMethodInvocation *)methodInvocation;
 
-- (void)loginWithMethodName:(NSString *)methodName parameters:(nullable NSArray *)parameters completionHandler:(nullable METLogInCompletionHandler)completionHandler;
+
 
 - (NSArray *)convertParameters:(NSArray *)parameters;
 
