@@ -38,3 +38,4 @@ FOUNDATION_EXPORT const unsigned char MeteorVersionString[];
 #import <Meteor/METDocumentChangeDetails.h>
 #import <Meteor/METCoreDataDDPClient.h>
 #import <Meteor/METIncrementalStore.h>
+#import <Meteor/METDDPConnection.h>
