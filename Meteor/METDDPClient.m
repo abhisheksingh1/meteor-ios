@@ -450,7 +450,7 @@ NSString * const METDDPClientDidChangeAccountNotification = @"METDDPClientDidCha
     METDataUpdate *update = [[METDataUpdate alloc] initWithUpdateType:METDataUpdateTypeAdd documentKey:documentKey fields:fields];
     [self processDataUpdate:update];
   }
-  [self.delegate didReceiveAddedMessage:message];
+  [_delegate didReceiveAddedMessage:message];
 }
 
 - (void)didReceiveChangedMessage:(NSDictionary *)message {
