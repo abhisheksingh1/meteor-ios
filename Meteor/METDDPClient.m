@@ -101,7 +101,10 @@ NSString * const METDDPClientDidChangeAccountNotification = @"METDDPClientDidCha
     _connectionRetryStrategy.randomizationFactor = 0.5;
     
     _connectionRetryTimer = [[METTimer alloc] initWithQueue:_queue block:^{
-      [self tryConnecting];
+        if (self.networkReachabilityManager.reachabilityStatus == METNetworkReachabilityStatusReachable)
+        {
+            [self tryConnecting];
+        }
     }];
     
     _networkReachabilityManager = [[METNetworkReachabilityManager alloc] initWithHostName:connection.serverURL.host];
@@ -186,7 +189,10 @@ NSString * const METDDPClientDidChangeAccountNotification = @"METDDPClientDidCha
   @synchronized(self) {
     if (_connectionStatus == METDDPConnectionStatusOffline || _connectionStatus == METDDPConnectionStatusWaiting) {
         _numberOfConnectionRetryAttempts = 0;
-      [self tryConnecting];
+        if (self.networkReachabilityManager.reachabilityStatus == METNetworkReachabilityStatusReachable)
+        {
+            [self tryConnecting];
+        }
     }
   }
 }
