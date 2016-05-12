@@ -66,7 +66,6 @@ typedef NS_OPTIONS(NSInteger, METMethodCallOptions) {
 - (void)sendMethodMessageForMethodInvocation:(METMethodInvocation *)methodInvocation;
 
 
-
 - (NSArray *)convertParameters:(NSArray *)parameters;
 
 @end
