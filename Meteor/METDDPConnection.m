@@ -71,7 +71,7 @@ NS_INLINE BOOL METShouldLogDDPMessages() {
 }
 
 - (void)sendMessage:(NSDictionary *)message {
-  NSAssert(self.open, @"Attempting to send message without an open connection");
+  //NSAssert(self.open, @"Attempting to send message without an open connection");
   
   NSError *error;
   message = [message mutableCopy];
